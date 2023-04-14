@@ -1,0 +1,96 @@
+1.	O que é programação orientada a objetos?
+2.	Quais são os pilares da programação orientada a objetos?
+3.	O que é uma classe em Java?
+4.	Como criar um objeto a partir de uma classe em Java?
+5.	O que faz a palavra new no Java?
+6.	Quais as semelhanças entre Java e C?
+7.	Quais as diferenças entre Java e C?
+8.	O que é a classe InputReader e qual é a sua função no programa?
+9.	Qual é a finalidade do método readDouble na classe InputReader?
+10.	O que é a interface PaymentType e como ela é utilizada no programa?
+11.	Como a classe PaymentTypeSelector é responsável por selecionar o tipo de pagamento a ser utilizado?
+12.	Qual é a relação entre a classe PaymentTypeSelector e as classes PixPayment, CreditPayment e BoletoPayment?
+13.	O que é polimorfismo e como ele é utilizado no programa?
+14.	Qual é a finalidade do método getName na interface PaymentType e nas classes que a implementam?
+15.	O que é a classe Scanner e como ela é utilizada no programa?
+16.	O que é uma exceção e como ela é tratada no método selectPaymentType da classe PaymentTypeSelector?
+17.	Como seria possível adicionar um novo tipo de pagamento ao programa?
+18.	Qual é a importância de utilizar interfaces no desenvolvimento de sistemas orientados a objetos?
+19.	Qual é a diferença entre uma classe abstrata e uma interface?
+20.	O que é encapsulamento e como ele é aplicado no programa?
+21.	Como seria possível melhorar a legibilidade do programa?
+22.	Qual é a finalidade da classe Main no programa?
+23.	O que é um construtor padrão e quando ele é utilizado?
+24.	Como é possível proteger o programa contra erros de entrada do usuário?
+25.	Qual é a importância de utilizar nomes descritivos para as classes, métodos e variáveis?
+26.	O que é herança e como ela pode ser aplicada no programa?
+27.	Como é possível utilizar a sobrecarga de métodos no programa?
+
+1.Programação orientada a objetos é um paradigma de programação que se baseia na ideia de que um programa pode ser construído como um conjunto de objetos que interagem entre si. Cada objeto possui suas próprias características e comportamentos, e essas características e comportamentos são definidos por meio de classes.
+
+2.Os pilares da programação orientada a objetos são:
+
+Encapsulamento: processo de esconder as informações de uma classe para protegê-las de modificações externas e garantir que apenas os métodos da classe possam acessá-las;
+Herança: processo de criação de uma nova classe a partir de uma classe já existente, com o objetivo de reutilizar o código e adicionar novas funcionalidades;
+Polimorfismo: habilidade de um objeto de uma classe ser tratado como um objeto de uma classe diferente, possibilitando a criação de código genérico e flexível.
+
+3.Em Java, uma classe é uma estrutura que define um conjunto de atributos e métodos que serão compartilhados por todos os objetos criados a partir dessa classe.
+
+4.Para criar um objeto a partir de uma classe em Java, é necessário utilizar a palavra-chave "new", seguida do nome da classe e dos parênteses vazios, como por exemplo: "MinhaClasse obj = new MinhaClasse();".
+
+5.A palavra "new" é utilizada para alocar memória para um novo objeto e invocar o construtor da classe para inicializar seus atributos.
+
+6.Java e C são ambas linguagens de programação de alto nível, com sintaxes parecidas e muitas funcionalidades semelhantes. Ambas suportam programação orientada a objetos, possuem suporte a tipos de dados primitivos e estruturas de controle de fluxo, por exemplo.
+
+7.As diferenças entre Java e C incluem a maneira como as linguagens são compiladas e executadas, com Java usando uma máquina virtual para garantir a portabilidade do código, enquanto C é compilado diretamente para o sistema operacional; além disso, Java é uma linguagem fortemente tipada, enquanto C é uma linguagem fracamente tipada.
+
+8.A classe InputReader é uma classe utilitária que lê dados de entrada do usuário e os converte para diferentes tipos de dados. Sua função no programa é capturar as informações inseridas pelo usuário para que o programa possa processá-las.
+
+9-O método readDouble na classe InputReader é responsável por ler um valor numérico de ponto flutuante (double) inserido pelo usuário e retornar esse valor.
+
+10-A interface PaymentType define um conjunto de métodos que devem ser implementados pelas classes que representam os diferentes tipos de pagamento suportados pelo programa. Ela é utilizada para garantir que cada classe de pagamento possua as mesmas funcionalidades básicas.
+
+11-A classe PaymentTypeSelector é responsável por receber as informações de pagamento do usuário e selecionar o tipo de pagamento correto a ser utilizado, com base nessas informações.
+
+12-A classe PaymentTypeSelector utiliza a herança para estabelecer uma relação de "é-um" com as classes PixPayment, CreditPayment e BoletoPayment, que representam diferentes tipos de pagamento.
+
+13-Polimorfismo é a capacidade de objetos de diferentes classes serem tratados como se fossem do mesmo tipo. Isso significa que um objeto pode assumir diferentes formas dependendo do contexto em que é usado. No programa em questão, o polimorfismo é utilizado para permitir que diferentes tipos de pagamento sejam tratados de maneira uniforme, usando a interface PaymentType. As classes PixPayment, CreditPayment e BoletoPayment implementam a interface PaymentType e podem ser usadas indistintamente no código que as trata como um objeto do tipo PaymentType, permitindo que diferentes tipos de pagamento sejam selecionados e processados de maneira genérica e flexível.
+
+
+
+
+14-O método getName é responsável por retornar o nome do tipo de pagamento. Ele é definido na interface PaymentType e implementado em suas classes filhas (PixPayment, CreditPayment e BoletoPayment). A finalidade desse método é permitir que o tipo de pagamento selecionado seja exibido de forma legível para o usuário, tanto na seleção como na confirmação do pagamento.
+
+
+
+
+15-A classe Scanner é uma classe do pacote java.util que é utilizada para ler a entrada de dados do usuário. No programa, ela é utilizada para ler a entrada do usuário durante a escolha do tipo de pagamento.
+
+16-Uma exceção é um evento que ocorre durante a execução de um programa que interrompe o fluxo normal de execução do programa. No método selectPaymentType da classe PaymentTypeSelector, uma exceção é lançada caso o usuário selecione um tipo de pagamento inválido. Essa exceção é tratada com o uso do bloco try-catch, que captura a exceção e exibe uma mensagem de erro para o usuário.
+
+17-Para adicionar um novo tipo de pagamento ao programa, seria necessário criar uma nova classe que implementa a interface PaymentType. Essa classe deve conter a lógica específica para o novo tipo de pagamento. Em seguida, a classe PaymentTypeSelector deve ser atualizada para incluir a opção do novo tipo de pagamento no menu de seleção.
+
+18-As interfaces são importantes no desenvolvimento de sistemas orientados a objetos porque elas permitem que diferentes classes implementem o mesmo conjunto de métodos, o que aumenta a flexibilidade do sistema e permite que novas classes sejam adicionadas facilmente sem afetar outras partes do sistema.
+
+19-Uma classe abstrata é uma classe que não pode ser instanciada, mas pode ser usada como uma classe base para outras classes. Ela pode conter métodos concretos e abstratos, além de variáveis de instância. Já uma interface é uma coleção de métodos abstratos que não possuem implementação. Ela é usada para definir um conjunto de métodos que as classes que a implementam devem fornecer.
+
+20-Encapsulamento é o conceito de ocultar a implementação interna de uma classe e expor somente uma interface pública. No programa, o encapsulamento é aplicado por meio do uso de modificadores de acesso, como private e public, que controlam o acesso aos membros da classe. Isso permite que a implementação interna da classe seja alterada sem afetar outras partes do sistema que utilizam a classe.
+
+21-Para melhorar a legibilidade do programa, seria possível utilizar nomes de variáveis mais descritivos, dividir as classes em arquivos separados, adicionar comentários ao código e seguir convenções de nomenclatura e formatação de código estabelecidas.
+
+22-A classe Main é a classe principal do programa e é responsável por iniciar a execução do programa. Ela contém o método main, que é o ponto de entrada do programa.
+
+23-Um construtor padrão é um construtor que não recebe nenhum argumento. Ele é utilizado quando nenhum outro construtor é definido explicitamente na classe e é necessário criar uma instância da classe.
+
+24-Uma das formas de proteger o programa contra erros de entrada do usuário é implementar verificações de validação nos dados inseridos pelo usuário. Isso pode ser feito por meio da utilização de condicionais que verificam se o valor inserido pelo usuário está dentro dos limites esperados ou se segue um formato específico. Além disso, é possível utilizar exceções para tratar erros de entrada do usuário e exibir mensagens de erro claras e informativas para ajudar o usuário a corrigir o problema.
+
+Outra abordagem é fornecer sugestões e validações em tempo real para ajudar o usuário a inserir as informações corretamente, como dicas de preenchimento e verificação de erros à medida que o usuário digita os dados. Isso pode ser implementado por meio de elementos de interface do usuário, como caixas de diálogo e mensagens de erro, ou por meio de validação de formulários em tempo real.
+
+
+25-A utilização de nomes descritivos para as classes, métodos e variáveis é importante para tornar o código mais legível e compreensível para outros programadores que possam precisar trabalhar no mesmo projeto ou dar manutenção no código. Além disso, nomes descritivos ajudam a tornar o código mais organizado e fácil de entender, o que pode facilitar a identificação de erros e problemas durante a fase de desenvolvimento. Nomes claros e concisos também podem ajudar a evitar ambiguidades e confusões que possam surgir ao lidar com várias classes e métodos diferentes no mesmo programa.
+
+
+26-No exercício apresentado, foi proposto o desenvolvimento de um programa de pagamentos que utiliza programação orientada a objetos. Foram abordados conceitos como classes, objetos, interfaces, herança, polimorfismo, encapsulamento e exceções. O programa permite selecionar entre diferentes tipos de pagamento (Pix, boleto ou cartão de crédito) e realizar uma transação de pagamento. Também são apresentadas considerações sobre a segurança de dados financeiros e a importância de nomes descritivos para facilitar a legibilidade e manutenção do código.
+
+27-A sobrecarga de métodos é uma técnica de programação que permite criar dois ou mais métodos com o mesmo nome, porém com parâmetros diferentes. No programa em questão, pode-se utilizar a sobrecarga de métodos para criar diferentes construtores para as classes de pagamento, de forma a permitir a criação desses objetos com diferentes combinações de informações. Por exemplo, pode-se criar um construtor que recebe apenas o valor a ser pago e outro que recebe o valor, a data de vencimento e o nome do pagador. Dessa forma, o programa se torna mais flexível e capaz de atender a diferentes necessidades dos usuários.
+
